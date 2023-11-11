@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06972BDF-0A89-4578-810F-2DCC05AC44F5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2E370D37-9DE6-46A4-9541-AF9E9EBC0680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.WebApi", "src\InLibra.WebApi\InLibra.WebApi.csproj", "{E6FB9061-7DC5-48FE-8558-5C54D054F8F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.WebApi", "src\InLibra.WebApi\InLibra.WebApi.csproj", "{13D85493-2F9E-45F5-83C9-7A3ECF91497F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,12 +10,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E6FB9061-7DC5-48FE-8558-5C54D054F8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6FB9061-7DC5-48FE-8558-5C54D054F8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6FB9061-7DC5-48FE-8558-5C54D054F8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6FB9061-7DC5-48FE-8558-5C54D054F8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E6FB9061-7DC5-48FE-8558-5C54D054F8F5} = {06972BDF-0A89-4578-810F-2DCC05AC44F5}
+		{13D85493-2F9E-45F5-83C9-7A3ECF91497F} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
 	EndGlobalSection
 EndGlobal

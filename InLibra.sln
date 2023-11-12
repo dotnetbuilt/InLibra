@@ -4,6 +4,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2E370D37-9DE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.WebApi", "src\InLibra.WebApi\InLibra.WebApi.csproj", "{13D85493-2F9E-45F5-83C9-7A3ECF91497F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.Domain", "src\InLibra.Domain\InLibra.Domain.csproj", "{DD1E7A7D-69B7-4544-971B-57E9694ABE0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,8 +16,13 @@ Global
 		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13D85493-2F9E-45F5-83C9-7A3ECF91497F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{13D85493-2F9E-45F5-83C9-7A3ECF91497F} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
+		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
 	EndGlobalSection
 EndGlobal

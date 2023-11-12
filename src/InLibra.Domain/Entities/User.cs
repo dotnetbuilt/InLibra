@@ -11,4 +11,5 @@ public class User:BaseModel
     public string Password { get; set; }
     public DateTime Birthday { get; set; }
     public Gender Gender { get; set; }
+    public Role Role { get; set; }
 }

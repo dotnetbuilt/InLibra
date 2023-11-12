@@ -20,4 +20,6 @@ public class Book:BaseModel
 
     public long ShelfId { get; set; }
     public Shelf Shelf { get; set; }
+
+    public ICollection<Genre> Genres { get; set; }
 }

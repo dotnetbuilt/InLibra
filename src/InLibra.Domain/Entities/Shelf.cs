@@ -9,4 +9,3 @@ public class Shelf:BaseModel
     public long UserId { get; set; }
     public User User { get; set; }    
 }
-

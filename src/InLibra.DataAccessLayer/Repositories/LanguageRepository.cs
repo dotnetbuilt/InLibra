@@ -29,6 +29,6 @@ public class LanguageRepository:ILanguageRepository
     public async ValueTask<Language> SelectByIdAsync(long languageId)
         => await _context.Languages.FirstOrDefaultAsync(language => language.Id == languageId);
 
-    public IQueryable<Language> SelectAsync()
+    public IQueryable<Language> SelectAll()
         => _context.Languages.AsQueryable();
 }

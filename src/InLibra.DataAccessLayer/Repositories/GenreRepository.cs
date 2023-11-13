@@ -29,6 +29,6 @@ public class GenreRepository:IGenreRepository
     public async ValueTask<Genre> SelectByIdAsync(long genreId)
         => await _context.Genres.FirstOrDefaultAsync(genre => genre.Id == genreId);
 
-    public IQueryable<Genre> SelectAsync()
+    public IQueryable<Genre> SelectAll()
         => _context.Genres.AsQueryable();
 }

@@ -22,4 +22,10 @@
       <Folder Include="DTOs\Books\" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\InLibra.DataAccessLayer\InLibra.DataAccessLayer.csproj" />
+      <ProjectReference Include="..\InLibra.Domain\InLibra.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

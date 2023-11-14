@@ -8,6 +8,7 @@
 
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
       <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     </ItemGroup>
 
@@ -24,6 +25,18 @@
       <ProjectReference Include="..\InLibra.DataAccessLayer\InLibra.DataAccessLayer.csproj" />
       <ProjectReference Include="..\InLibra.Domain\InLibra.Domain.csproj" />
     </ItemGroup>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

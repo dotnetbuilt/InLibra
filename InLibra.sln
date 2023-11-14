@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.Domain", "src\InLib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.DataAccessLayer", "src\InLibra.DataAccessLayer\InLibra.DataAccessLayer.csproj", "{759B3B40-9B94-4AE3-AD9D-53945BE955A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InLibra.Service", "src\InLibra.Service\InLibra.Service.csproj", "{2CF181B8-D358-484D-A17E-560F1E2F3A9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,10 +28,15 @@ Global
 		{759B3B40-9B94-4AE3-AD9D-53945BE955A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{759B3B40-9B94-4AE3-AD9D-53945BE955A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{759B3B40-9B94-4AE3-AD9D-53945BE955A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF181B8-D358-484D-A17E-560F1E2F3A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF181B8-D358-484D-A17E-560F1E2F3A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF181B8-D358-484D-A17E-560F1E2F3A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF181B8-D358-484D-A17E-560F1E2F3A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{13D85493-2F9E-45F5-83C9-7A3ECF91497F} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
 		{DD1E7A7D-69B7-4544-971B-57E9694ABE0F} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
 		{759B3B40-9B94-4AE3-AD9D-53945BE955A7} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
+		{2CF181B8-D358-484D-A17E-560F1E2F3A9B} = {2E370D37-9DE6-46A4-9541-AF9E9EBC0680}
 	EndGlobalSection
 EndGlobal

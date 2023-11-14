@@ -3,6 +3,7 @@ using InLibra.DataAccessLayer.Contracts;
 using InLibra.Domain.Entities;
 using InLibra.Service.DTOs.Users;
 using InLibra.Service.Exceptions;
+using InLibra.Service.Helpers;
 using InLibra.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,7 @@ public class UserService : IUserService
             throw new AlreadyExistsException(message: "Email is already taken");
 
         var newUser = _mapper.Map<User>(source: dto);
+        newUser.Password = PasswordHasher.Hash(dto.Password);
 
         await _repository.CreateAsync(entity: newUser);
 

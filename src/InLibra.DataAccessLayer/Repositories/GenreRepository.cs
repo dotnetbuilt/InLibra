@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using InLibra.DataAccessLayer.Contexts;
 using InLibra.DataAccessLayer.Contracts;
 using InLibra.Domain.Entities;
@@ -26,9 +27,27 @@ public class GenreRepository:IGenreRepository
         _context.SaveChanges();
     }
 
-    public async ValueTask<Genre> SelectByIdAsync(long genreId)
-        => await _context.Genres.FirstOrDefaultAsync(genre => genre.Id == genreId);
+    public async ValueTask<Genre> SelectAsync(Expression<Func<Genre, bool>> expression = null, string[] includes = null)
+    {
+        var entities = 
+            expression != null ? _context.Genres.AsQueryable() : _context.Genres.Where(expression).AsQueryable();
+        
+        if(includes!=null)
+            foreach (var include in includes)
+                entities = entities.Include(include);
 
-    public IQueryable<Genre> SelectAll()
-        => _context.Genres.AsQueryable();
+        return await entities.FirstOrDefaultAsync();
+    }
+
+    public IQueryable<Genre> SelectAll(Expression<Func<Genre, bool>> expression = null, string[] includes = null)
+    {
+        var entities = 
+            expression != null ? _context.Genres.AsQueryable() : _context.Genres.Where(expression).AsQueryable();
+        
+        if(includes!=null)
+            foreach (var include in includes)
+                entities = entities.Include(include);
+
+        return entities;
+    }
 }

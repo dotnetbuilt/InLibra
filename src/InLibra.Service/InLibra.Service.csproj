@@ -46,9 +46,6 @@
 
 
 
-    <ItemGroup>
-      <Folder Include="Interfaces\" />
-    </ItemGroup>
 
 
 

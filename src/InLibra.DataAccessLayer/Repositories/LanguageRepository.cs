@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using InLibra.DataAccessLayer.Contexts;
 using InLibra.DataAccessLayer.Contracts;
 using InLibra.Domain.Entities;
@@ -26,9 +27,29 @@ public class LanguageRepository:ILanguageRepository
         _context.SaveChanges();
     }
 
-    public async ValueTask<Language> SelectByIdAsync(long languageId)
-        => await _context.Languages.FirstOrDefaultAsync(language => language.Id == languageId);
+    public async ValueTask<Language> SelectAsync(Expression<Func<Language, bool>> expression = null, string[] includes = null)
+    {
+        var languages = expression == null
+            ? _context.Languages.AsQueryable()
+            : _context.Languages.Where(expression).AsQueryable();
+        
+        if(includes != null)
+            foreach (var include in includes)
+                languages = languages.Include(include);
 
-    public IQueryable<Language> SelectAll()
-        => _context.Languages.AsQueryable();
+        return await languages.FirstOrDefaultAsync();
+    }
+
+    public IQueryable<Language> SelectAll(Expression<Func<Language, bool>> expression = null, string[] includes = null)
+    {
+        var languages = expression == null
+            ? _context.Languages.AsQueryable()
+            : _context.Languages.Where(expression).AsQueryable();
+        
+        if(includes != null)
+            foreach (var include in includes)
+                languages = languages.Include(include);
+
+        return languages;
+    }
 }

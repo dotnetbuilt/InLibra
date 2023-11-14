@@ -65,7 +65,7 @@ public class UserService : IUserService
         return _mapper.Map<UserResultDto>(source: user);
     }
 
-    public async ValueTask<IEnumerable<UserResultDto>> RetrieveAll()
+    public async ValueTask<IEnumerable<UserResultDto>> RetrieveAllAsync()
     {
         var users = await _repository.SelectAll().ToListAsync();
 

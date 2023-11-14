@@ -10,5 +10,5 @@ public interface IUserService
     ValueTask<UserResultDto> UpdateAsync(UserUpdateDto dto);
     ValueTask<bool> RemoveAsync(long userId);
     ValueTask<UserResultDto> RetrieveByIdAsync(long userId);
-    ValueTask<IEnumerable<UserResultDto>> RetrieveAll();
+    ValueTask<IEnumerable<UserResultDto>> RetrieveAllAsync();
 }

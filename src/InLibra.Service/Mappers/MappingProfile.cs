@@ -2,6 +2,7 @@ using AutoMapper;
 using InLibra.Domain.Entities;
 using InLibra.Service.DTOs.BookGenres;
 using InLibra.Service.DTOs.Books;
+using InLibra.Service.DTOs.BookShelves;
 using InLibra.Service.DTOs.Genres;
 using InLibra.Service.DTOs.Languages;
 using InLibra.Service.DTOs.Shelves;
@@ -39,5 +40,9 @@ public class MappingProfile:Profile
         CreateMap<User, UserCreationDto>().ReverseMap();
         CreateMap<User, UserUpdateDto>().ReverseMap();
         CreateMap<User, UserResultDto>().ReverseMap();
+        
+        //BookShelf
+        CreateMap<BookShelf, BookCreationDto>().ReverseMap();
+        CreateMap<BookShelf, BookShelfResultDto>().ReverseMap();
     }
 }

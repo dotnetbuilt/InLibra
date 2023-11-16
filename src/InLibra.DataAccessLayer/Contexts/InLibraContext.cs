@@ -14,5 +14,6 @@ public class InLibraContext:DbContext
     public DbSet<Genre> Genres { get; set; }
     public DbSet<Language> Languages { get; set; }
     public DbSet<Shelf> Shelves { get; set; }
+    public DbSet<BookShelf> BookShelves { get; set; }
     public DbSet<User> Users { get; set; }
 }

@@ -18,8 +18,5 @@ public class Book:BaseModel
     public long UserId { get; set; }
     public User User { get; set; }
 
-    public long ShelfId { get; set; }
-    public Shelf Shelf { get; set; }
-
     public ICollection<Genre> Genres { get; set; }
 }

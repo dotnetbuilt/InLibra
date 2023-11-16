@@ -8,5 +8,4 @@ public class BookUpdateDto
     public int Pages { get; set; }
     public string Author { get; set; }
     public long LanguageId { get; set; }
-    public long ShelfId { get; set; }
 }

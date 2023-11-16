@@ -14,6 +14,5 @@ public class BookResultDto
     public int Pages { get; set; }
     public string Author { get; set; }
     public LanguageResultDto Language { get; set; }
-    public ShelfResultDto Shelf { get; set; }
     public UserResultDto User { get; set; }
 }

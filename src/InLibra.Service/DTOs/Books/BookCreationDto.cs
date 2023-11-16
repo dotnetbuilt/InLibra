@@ -9,5 +9,4 @@ public class BookCreationDto
     public long LanguageId { get; set; }
     public long AttachmentId { get; set; }
     public long UserId { get; set; }
-    public long ShelfId { get; set; }
 }

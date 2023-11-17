@@ -40,6 +40,10 @@ public class BookGenreService:IBookGenreService
             throw new AlreadyExistsException(message: "BookGenre is already exist");
 
         var newBookGenre = _mapper.Map<BookGenre>(source: dto);
+        newBookGenre.Book = book;
+        newBookGenre.BookId = book.Id;
+        newBookGenre.Genre = genre;
+        newBookGenre.GenreId = genre.Id;
 
         await _repository.CreateAsync(newBookGenre);
 

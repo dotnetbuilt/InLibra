@@ -34,6 +34,8 @@ public class ShelfService:IShelfService
             throw new AlreadyExistsException(message: "Shelf is already exist");
 
         var newShelf = _mapper.Map<Shelf>(source: dto);
+        newShelf.User = user;
+        newShelf.UserId = user.Id;
 
         await _repository.CreateAsync(entity: newShelf);
 

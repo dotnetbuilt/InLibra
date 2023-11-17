@@ -1,4 +1,3 @@
-using InLibra.Domain.Entities;
 using InLibra.Service.DTOs.BookShelves;
 
 namespace InLibra.Service.Interfaces;

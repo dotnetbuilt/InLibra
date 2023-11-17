@@ -16,10 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\InLibra.DataAccessLayer\InLibra.DataAccessLayer.csproj" />
     </ItemGroup>
 

@@ -1,6 +1,9 @@
 using InLibra.DataAccessLayer.Contexts;
+using InLibra.Service.Helpers;
 using InLibra.WebApi.Extensions;
+using InLibra.WebApi.Middlewares;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,17 @@ builder.Services.AddDbContext<InLibraContext>(options =>
 });
 
 builder.Services.AddCustomServices();
+
+//Add Serilog
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+
+
+PathHelper.WebRootPath = Path.GetFullPath("wwwroot");
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +40,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 

@@ -23,6 +23,11 @@ public static class ServiceCollection
         //Services
         services.AddScoped<IAttachmentService, AttachmentService>();
         services.AddScoped<IBookGenreService, BookGenreService>();
-        services.AddScoped<IBookShelfService, IBookShelfService>()
+        services.AddScoped<IBookShelfService, BookShelfService>();
+        services.AddScoped<IBookService, BookService>();
+        services.AddScoped<IGenreService, GenreService>();
+        services.AddScoped<ILanguageService, LanguageService>();
+        services.AddScoped<IShelfService, ShelfService>();
+        services.AddScoped<IUserService, UserService>();
     }
 }

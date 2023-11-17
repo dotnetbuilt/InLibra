@@ -1,4 +1,5 @@
 using InLibra.DataAccessLayer.Contexts;
+using InLibra.WebApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +11,7 @@ builder.Services.AddDbContext<InLibraContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
-
+builder.Services.AddCustomServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

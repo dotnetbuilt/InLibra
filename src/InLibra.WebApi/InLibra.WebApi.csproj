@@ -17,6 +17,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\InLibra.DataAccessLayer\InLibra.DataAccessLayer.csproj" />
+      <ProjectReference Include="..\InLibra.Service\InLibra.Service.csproj" />
     </ItemGroup>
+
 
 </Project>

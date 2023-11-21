@@ -2,6 +2,7 @@ using InLibra.DataAccessLayer.Contracts;
 using InLibra.DataAccessLayer.Repositories;
 using InLibra.Domain.Entities;
 using InLibra.Service.Interfaces;
+using InLibra.Service.Mappers;
 using InLibra.Service.Services;
 
 namespace InLibra.WebApi.Extensions;
@@ -29,5 +30,8 @@ public static class ServiceCollection
         services.AddScoped<ILanguageService, LanguageService>();
         services.AddScoped<IShelfService, ShelfService>();
         services.AddScoped<IUserService, UserService>();
+
+        //Automapper
+        services.AddAutoMapper(typeof(MappingProfile));
     }
 }
